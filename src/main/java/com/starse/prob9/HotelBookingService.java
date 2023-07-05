@@ -60,23 +60,23 @@ public class HotelBookingService {
 		return false;
 	}
 
-	String showErrorMessage() {
-		return "Invalid choice. Please try again!";
+	void showErrorMessage() {
+		System.out.println("Invalid choice. Please try again!");
 	}
 	
 	boolean isFound(Scanner sc, String status) {
 		int roomId = Validation.validate(sc, 1, 10);
 		boolean found = false;
 		
-		boolean s = false;
+		boolean booked = false;
 		if(status.equalsIgnoreCase("cancel")) 
-			s = false;
+			booked = false;
 		else
-			s = true;
+			booked = true;
 		
 		for (Map.Entry<Integer, Boolean> entry : rooms.entrySet()) {
-			if (entry.getKey() == roomId && entry.getValue() == s) {
-				entry.setValue(!s);
+			if (entry.getKey() == roomId && entry.getValue() == booked) {
+				entry.setValue(!booked);
 				found = true;
 				break;
 			}

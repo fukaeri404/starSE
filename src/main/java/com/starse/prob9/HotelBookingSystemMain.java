@@ -18,7 +18,7 @@ public class HotelBookingSystemMain {
 			case 2 -> service.cancelBooking(sc);
 			case 3 -> service.displayBooking();
 			case 4 -> cont = service.exit();
-			default -> throw new IllegalArgumentException(service.showErrorMessage());
+			default -> service.showErrorMessage();
 			}
 			System.out.println();
 		} while (cont);
