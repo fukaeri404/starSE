@@ -31,7 +31,6 @@ public class GuessRandomNumberMain {
 				}
 				again = input;
 			}
-
 		} while (again.equalsIgnoreCase("y"));
 
 	}
