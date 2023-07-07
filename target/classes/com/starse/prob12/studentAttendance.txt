@@ -1,0 +1,5 @@
+Name       Attendance Status
+Taro         "
+Hanako       "
+Sato         "
+Nanase       "
