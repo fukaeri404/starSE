@@ -1,17 +1,23 @@
 package com.starse.prob10;
 
-import java.util.Scanner;
-
 public class LibraryManagementSystem {
-	static final Scanner sc = new Scanner(System.in);
+
 	public static void main(String[] args) {
-		final LibraryManagementService service = LibraryManagementService.getInstance();
-		final LibraryManagementView view = LibraryManagementView.getInstance();
+		LibraryManagementService service = LibraryManagementService.getInstance();
 		service.initializeData();
-		boolean exit = false;
-		do {
-			view.initialDisplay();
-			exit = service.mapp(sc);
-		}while(exit);
+
+		while (true) {
+			service.displayInitialState();
+			int inputChoice = service.getInputChoice();
+			switch (inputChoice) {
+			case 1 -> service.displayAllBooks();
+			case 2 -> service.displayAllMembers();
+			case 3 -> service.lendBook();
+			case 4 -> service.returnBook();
+			case 5 -> service.exit();
+			default -> service.showErrorMessage();// you will never can reach this default because of validation
+			}
+		}
+
 	}
 }

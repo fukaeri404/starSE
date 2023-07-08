@@ -7,7 +7,7 @@ public class Validation {
 		int userInput;
 		do {
 			while (!sc.hasNextInt()) {
-				System.out.print("Please enter a number (integer) :");
+				System.out.print("Please enter a number for "+type);
 				sc.next();
 			}
 			userInput = sc.nextInt();

@@ -11,6 +11,8 @@ public class Validation {
 				System.out.print("Invalid input. Please enter a number ("+start+"~"+end+") :");
 			}
 			userInput = sc.nextInt();
+			if(userInput < start || userInput > end)
+				System.out.println("Such kind of room doesn't exist!Please enter a number "+start+"~"+end+") :");
 		} while (userInput < start || userInput > end);
 		return userInput;
 	}
