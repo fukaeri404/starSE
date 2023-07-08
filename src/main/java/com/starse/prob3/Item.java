@@ -3,9 +3,9 @@ package com.starse.prob3;
 public class Item {
 	private int id;
 	private String name;
-	private int price;
+	private double price;
 
-	public Item(int id, String name, int price) {
+	public Item(int id, String name, double price) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -28,17 +28,14 @@ public class Item {
 		this.name = name;
 	}
 
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
-	public void setPrice(int price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 
-	@Override
-	public String toString() {
-		return id + ". " + name + " (" + price + "yen)";
-	}
-
+	
+	
 }
